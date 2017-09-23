@@ -1,5 +1,7 @@
 function reveal() {
   //going to reveal the image when clicked
-  var imageId = document.getElementById('myPhoto');
-  imageId.style.display = 'block';
+  document.getElementById('myPhoto').style.display = 'block';
+  document.getElementById('netflix').style.display = 'block';
+  document.getElementById('xbox').style.display = 'block';
+  document.getElementById('hiking').style.display = 'block';
 }

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+  <?php include 'cart.php';?>
   <head>
     <title>Andrew Martherus' Assignments Page</title>
+    <link rel="stylesheet" href="shoppingcart.css">
+    <script src="shoppingcart.js"></script>
   </head>
   <body>
 Does this appear correct?</br>

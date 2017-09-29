@@ -21,6 +21,8 @@
     </ul>
 
     <button Onclick="window.location.href='browseItems.html'"type="button" class="btn">Go Back to Browsing</button>
+    <button Onclick="window.location.href='checkout.php.'"type="button" class="btn">Go Back to Browsing</button>
+
 
   </body>
 </html>

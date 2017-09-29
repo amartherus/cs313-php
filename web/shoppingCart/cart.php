@@ -20,7 +20,7 @@
         </br><?php echo $_POST["krab_quantity"]; ?>
     </ul>
 
-    <button onClick="<a href='browseItems.html'></a>"type="button" class="btn">Go Back to Browsing</button>
+    <button Onclick="window.location.href='browseItems.html'"type="button" class="btn">Go Back to Browsing</button>
 
   </body>
 </html>

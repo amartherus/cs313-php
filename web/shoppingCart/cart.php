@@ -6,7 +6,7 @@
     <script src="shoppingcart.js"></script>
   </head>
   <body>
-
+<form action="checkout.php" method="post">
     <ul class="list-group">
       <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
         </br><?php echo $_POST["spongebob_quantity"]; ?>
@@ -21,7 +21,8 @@
     </ul>
 
     <button Onclick="window.location.href='browseItems.html'"type="button" class="btn">Go Back to Browsing</button>
-    <button Onclick="window.location.href='checkout.php.'"type="button" class="btn">Go Back to Browsing</button>
+    <input type="submit" value="Click to Check Out">
+  </form>
 
 
   </body>

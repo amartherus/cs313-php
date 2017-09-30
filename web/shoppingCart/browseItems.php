@@ -16,22 +16,38 @@ session_start();
     <form action="cart.php" method="post">
       <ul class="list-group">
         <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
-        </br><p name="spongebob_price">100.00</p>
+        </br><p name="spongebob_price">$300.00</p>
         </br><input type="number" name="spongebob_quantity"></li>
         <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">
-        </br><p name="patrick_price">100.00</p>
+        </br><p name="patrick_price">$200.00</p>
           </br><input type="number" name="patrick_quantity"></li>
         <li class="list-group-item"><img src="../photos/Squidward.png" alt="Squidward" height="200" width="100">
-        </br><p name="squidward_price">100.00</p>
+        </br><p name="squidward_price">$1.00</p>
           </br><input type="number" name="squidward_quantity"></li>
         <li class="list-group-item"><img src="../photos/gary_the_snail.png" alt="Gary the Snail" height="200" width="100">
-        </br><p name="gary_price">100.00</p>
+        </br><p name="gary_price">$100.00</p>
           </br><input type="number" name="gary_quantity"></li>
         <li class="list-group-item"><img src="../photos/Mr_Krabs.png" alt="Mr. Krabs" height="200" width="100">
-        </br><p name="krab_price">100.00</p>
+        </br><p name="krab_price">$100000.00</p>
           </br><input type="number" name="krab_quantity"></li>
       </ul>
     </br>
+
+    <?php
+    //price values need to be saved
+    $_SESSION["spongebob_price"] = 300.00;
+    $_SESSION["patrick_price"] = 200.00;
+    $_SESSION["squidward_price"] = 1.00;
+    $_SESSION["gary_price"] = 100.00;
+    $_SESSION["krab_price"] = 100000.00;
+    //quantity values need to be saved
+    $_SESSION["spongebob_quantity"] = spongebob_quantity;
+    $_SESSION["patrick_quantity"] = patrick_quantity;
+    $_SESSION["squidward_quantity"] = squidward_quantity;
+    $_SESSION["gary_quantity"] = gary_quantity;
+    $_SESSION["krab_quantity"] = krab_quantity;
+     ?>
+     
       <input type="submit" value="Click to view your cart">
     </form>
   </br>

@@ -11,10 +11,10 @@ session_start();
 
     <h1>Your Order has been placed!</h1>
 
-    <?php echo "Address: ".$_SESSION["address"];?></br>
-    <?php echo "City: ".$_SESSION["city"];?></br>
-    <?php echo "State: ".$_SESSION["state"];?></br>
-    <?php echo "Zip: ".$_SESSION["zip"];?></br>
+    <?php echo "Address: ".$_POST["address"];?></br>
+    <?php echo "City: ".$_POST["city"];?></br>
+    <?php echo "State: ".$_POST["state"];?></br>
+    <?php echo "Zip: ".$_POST["zip"];?></br>
 
   </body>
 

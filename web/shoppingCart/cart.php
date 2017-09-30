@@ -11,15 +11,6 @@ session_start();
   </head>
   <body>
 
-    <?php
-    //quantity values need to be saved
-    $_SESSION["spongebob_quantity"] = $_POST["spongebob_quantity"];
-    $_SESSION["patrick_quantity"] = $_POST["patrick_quantity"];
-    $_SESSION["squidward_quantity"] = $_POST["squidward_quantity"];
-    $_SESSION["gary_quantity"] = $_POST["gary_quantity"];
-    $_SESSION["krab_quantity"] = $_POST["krab_quantity"];
-    ?>
-
 <form action="checkout.php" method="post">
     <ul class="list-group">
       <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
@@ -40,6 +31,16 @@ session_start();
     </ul>
 
     <button Onclick="window.location.href='browseItems.php'"type="button" class="btn">Go Back to Browsing</button>
+
+    <?php
+    //quantity values need to be saved
+    $_SESSION["spongebob_quantity"] = $_POST["spongebob_quantity"];
+    $_SESSION["patrick_quantity"] = $_POST["patrick_quantity"];
+    $_SESSION["squidward_quantity"] = $_POST["squidward_quantity"];
+    $_SESSION["gary_quantity"] = $_POST["gary_quantity"];
+    $_SESSION["krab_quantity"] = $_POST["krab_quantity"];
+    ?>
+    
     <input type="submit" value="Click to Check Out">
   </form>
 

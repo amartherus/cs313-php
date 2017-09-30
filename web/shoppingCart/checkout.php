@@ -37,14 +37,10 @@ Does this appear correct?</br>
           <li class="list-group-item">City: <input type="text" name="city"></br>
           <li class="list-group-item">State: <input type="text" name="state"></br>
           <li class="list-group-item">Zip: <input type="text" name="zip"></br>
+            
         </ul>
 
-        <?php
-        $_SESSION["address"] = $_POST["address"];
-        $_SESSION["city"] = $_POST["city"];
-        $_SESSION["state"] = $_POST["state"];
-        $_SESSION["zip"] = $_POST["zip"];
-        ?>
+
 
         <input type="submit" value="Complete Order">
       </form>

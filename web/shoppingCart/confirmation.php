@@ -6,6 +6,8 @@ session_start();
 <html>
   <head>
     <title>Andrew Martherus' Assignments Page</title>
+    <link rel="stylesheet" href="shoppingcart.css">
+    <script src="shoppingcart.js"></script>
   </head>
   <body>
 

@@ -31,14 +31,6 @@ session_start();
         </br><p name="krab_price">$100000.00</p>
           </br><input type="number" name="krab_quantity"></li>
 
-          <?php
-          //quantity values need to be saved
-          $_SESSION["spongebob_quantity"] = $_POST["spongebob_quantity"];
-          $_SESSION["patrick_quantity"] = $_POST["patrick_quantity"];
-          $_SESSION["squidward_quantity"] = $_POST["squidward_quantity"];
-          $_SESSION["gary_quantity"] = $_POST["gary_quantity"];
-          $_SESSION["krab_quantity"] = $_POST["krab_quantity"];
-          ?>
       </ul>
     </br>
 

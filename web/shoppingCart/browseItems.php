@@ -30,6 +30,15 @@ session_start();
         <li class="list-group-item"><img src="../photos/Mr_Krabs.png" alt="Mr. Krabs" height="200" width="100">
         </br><p name="krab_price">$100000.00</p>
           </br><input type="number" name="krab_quantity"></li>
+
+          <?php
+          //quantity values need to be saved
+          $_SESSION["spongebob_quantity"] = spongebob_quantity;
+          $_SESSION["patrick_quantity"] = patrick_quantity;
+          $_SESSION["squidward_quantity"] = squidward_quantity;
+          $_SESSION["gary_quantity"] = gary_quantity;
+          $_SESSION["krab_quantity"] = krab_quantity;
+          ?>
       </ul>
     </br>
 
@@ -40,14 +49,9 @@ session_start();
     $_SESSION["squidward_price"] = 1.00;
     $_SESSION["gary_price"] = 100.00;
     $_SESSION["krab_price"] = 100000.00;
-    //quantity values need to be saved
-    $_SESSION["spongebob_quantity"] = spongebob_quantity;
-    $_SESSION["patrick_quantity"] = patrick_quantity;
-    $_SESSION["squidward_quantity"] = squidward_quantity;
-    $_SESSION["gary_quantity"] = gary_quantity;
-    $_SESSION["krab_quantity"] = krab_quantity;
+
      ?>
-     
+
       <input type="submit" value="Click to view your cart">
     </form>
   </br>

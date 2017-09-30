@@ -22,7 +22,7 @@ $_SESSION["krab_quantity"] = $_POST["krab_quantity"];
 <form action="checkout.php" method="post">
     <ul class="list-group">
       <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
-      </br><?php echo "$".($_SESSION["spongebob_price"] * $_SESSION["spongebob_quantity"]);?>
+      </br><?php echo "$".$_SESSION["spongebob_price"];?>
     </br><?php echo "Quantity: ".$_SESSION["spongebob_quantity"];?>
       <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">
       </br><?php echo "$".$_SESSION["patrick_price"];?>
@@ -37,6 +37,12 @@ $_SESSION["krab_quantity"] = $_POST["krab_quantity"];
       </br><?php echo "$".$_SESSION["krab_price"];?>
     </br><?php echo "Quantity: ".$_SESSION["krab_quantity"];?>
     </ul>
+
+    <?php echo "Order Total: $".($_SESSION["spongebob_price"] * $_SESSION["spongebob_quantity"]) +
+    ($_SESSION["patrick_price"] * $_SESSION["patrick_quantity"]) +
+    ($_SESSION["squidward_price"] * $_SESSION["squidward_quantity"]) +
+    ($_SESSION["gary_price"] * $_SESSION["gary_quantity"]) +
+    ($_SESSION["krab_price"] * $_SESSION["krab_quantity"]) +
 
     <button Onclick="window.location.href='browseItems.php'"type="button" class="btn">Go Back to Browsing</button>
 

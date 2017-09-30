@@ -6,6 +6,8 @@
     <script src="shoppingcart.js"></script>
   </head>
   <body>
+
+
 <form action="checkout.php" method="post">
     <ul class="list-group">
       <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">

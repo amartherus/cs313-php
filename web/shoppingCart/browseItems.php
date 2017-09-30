@@ -1,3 +1,9 @@
+<?php
+// Start the session
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,19 +16,19 @@
     <form action="cart.php" method="post">
       <ul class="list-group">
         <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
-        </br><p>$100.00</p>
+        </br><p name="spongebob_price">100.00</p>
         </br><input type="number" name="spongebob_quantity"></li>
         <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">
-          </br><p>$100.00</p>
+        </br><p name="patrick_price">100.00</p>
           </br><input type="number" name="patrick_quantity"></li>
         <li class="list-group-item"><img src="../photos/Squidward.png" alt="Squidward" height="200" width="100">
-          </br><p>$100.00</p>
+        </br><p name="squidward_price">100.00</p>
           </br><input type="number" name="squidward_quantity"></li>
         <li class="list-group-item"><img src="../photos/gary_the_snail.png" alt="Gary the Snail" height="200" width="100">
-          </br><p>$100.00</p>
+        </br><p name="gary_price">100.00</p>
           </br><input type="number" name="gary_quantity"></li>
         <li class="list-group-item"><img src="../photos/Mr_Krabs.png" alt="Mr. Krabs" height="200" width="100">
-          </br><p>$100.00</p>
+        </br><p name="krab_price">100.00</p>
           </br><input type="number" name="krab_quantity"></li>
       </ul>
     </br>

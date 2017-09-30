@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <?php include 'cart.php';?>
   <head>
     <title>Andrew Martherus' Assignments Page</title>
     <link rel="stylesheet" href="shoppingcart.css">

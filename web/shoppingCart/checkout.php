@@ -18,11 +18,13 @@ Does this appear correct?</br>
 
         <p>Please enter your address:</p></br>
         <ul class="list-group">
-          <li class="list-group-item">Address: <input type="text" name="address">
-          <li class="list-group-item">City: <input type="text" name="city">
-          <li class="list-group-item">State: <input type="text" name="state">
-          <li class="list-group-item">Zip: <input type="text" name="zip">
+          <li class="list-group-item">Address: <input type="text" name="address"></br>
+          <li class="list-group-item">City: <input type="text" name="city"></br>
+          <li class="list-group-item">State: <input type="text" name="state"></br>
+          <li class="list-group-item">Zip: <input type="text" name="zip"></br>
+        </ul>
 
+        <input type="submit" value="Complete Order">
       </form>
 
   </body>

@@ -33,11 +33,11 @@ session_start();
 
           <?php
           //quantity values need to be saved
-          $_SESSION["spongebob_quantity"] = spongebob_quantity;
-          $_SESSION["patrick_quantity"] = patrick_quantity;
-          $_SESSION["squidward_quantity"] = squidward_quantity;
-          $_SESSION["gary_quantity"] = gary_quantity;
-          $_SESSION["krab_quantity"] = krab_quantity;
+          $_SESSION["spongebob_quantity"] = $_POST["spongebob_quantity"];
+          $_SESSION["patrick_quantity"] = $_POST["patrick_quantity"];
+          $_SESSION["squidward_quantity"] = $_POST["squidward_quantity"];
+          $_SESSION["gary_quantity"] = $_POST["gary_quantity"];
+          $_SESSION["krab_quantity"] = $_POST["krab_quantity"];
           ?>
       </ul>
     </br>

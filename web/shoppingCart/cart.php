@@ -42,7 +42,8 @@ $_SESSION["krab_quantity"] = $_POST["krab_quantity"];
     ($_SESSION["patrick_price"] * $_SESSION["patrick_quantity"]) +
     ($_SESSION["squidward_price"] * $_SESSION["squidward_quantity"]) +
     ($_SESSION["gary_price"] * $_SESSION["gary_quantity"]) +
-    ($_SESSION["krab_price"] * $_SESSION["krab_quantity"]) +
+    ($_SESSION["krab_price"] * $_SESSION["krab_quantity"])
+    ?>
 
     <button Onclick="window.location.href='browseItems.php'"type="button" class="btn">Go Back to Browsing</button>
 

@@ -11,6 +11,16 @@ session_start();
   </head>
   <body>
 Does this appear correct?</br>
+
+<?php
+//quantity values need to be saved
+$_SESSION["spongebob_quantity"] = $_POST["spongebob_quantity"];
+$_SESSION["patrick_quantity"] = $_POST["patrick_quantity"];
+$_SESSION["squidward_quantity"] = $_POST["squidward_quantity"];
+$_SESSION["gary_quantity"] = $_POST["gary_quantity"];
+$_SESSION["krab_quantity"] = $_POST["krab_quantity"];
+?>
+
     <form action="confirmation.php" method="post">
         <ul class="list-group">
           <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
@@ -39,10 +49,10 @@ Does this appear correct?</br>
         </ul>
 
         <?php
-        $_SESSION["address"] = address;
-        $_SESSION["city"] = city;
-        $_SESSION["state"] = state;
-        $_SESSION["zip"] = zip;
+        $_SESSION["address"] = $_POST["address"];
+        $_SESSION["city"] = $_POST["city"];
+        $_SESSION["state"] = $_POST["state"];
+        $_SESSION["zip"] = $_POST["zip"];
         ?>
 
         <input type="submit" value="Complete Order">

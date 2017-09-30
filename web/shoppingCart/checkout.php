@@ -7,7 +7,7 @@
   </head>
   <body>
 Does this appear correct?</br>
-    <form action="checkout.php" method="post">
+    <form action="confirmation.php" method="post">
         <ul class="list-group">
           <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
           <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">

@@ -5,7 +5,7 @@
   </head>
   <body>
 
-    <h1>Under Construction</h1>
+    <h1>Your Order has been placed!</h1>
 
   </body>
 </html>

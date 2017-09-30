@@ -22,7 +22,7 @@ $_SESSION["krab_quantity"] = $_POST["krab_quantity"];
 <form action="checkout.php" method="post">
     <ul class="list-group">
       <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
-      </br><?php echo "$".$_SESSION["spongebob_price"];?>
+      </br><?php echo "$".($_SESSION["spongebob_price"] * $_SESSION["spongebob_quantity"]);?>
     </br><?php echo "Quantity: ".$_SESSION["spongebob_quantity"];?>
       <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">
       </br><?php echo "$".$_SESSION["patrick_price"];?>

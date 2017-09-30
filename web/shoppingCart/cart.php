@@ -9,8 +9,7 @@
 <form action="checkout.php" method="post">
     <ul class="list-group">
       <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
-        </br><?php echo $_POST["spongebob_quantity"];
-        $spongebob_quantity = $_POST["spongebob_quantity"]?>
+        </br><?php echo $_POST["spongebob_quantity"];?>
       <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">
         </br><?php echo $_POST["patrick_quantity"]; ?>
       <li class="list-group-item"><img src="../photos/Squidward.png" alt="Squidward" height="200" width="100">

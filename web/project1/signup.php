@@ -6,7 +6,7 @@ session_start();
 
 <!DOCTYPE html>
 <html>
-<form action="browseItems.php" method="post">
+<form action="thankyou.php" method="post">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputuserName4" class="col-form-label">Username</label>
@@ -15,6 +15,10 @@ session_start();
     <div class="form-group col-md-6">
       <label for="inputPassword4" class="col-form-label">Password</label>
       <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4" class="col-form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
   </div>
   <div class="form-group">

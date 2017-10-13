@@ -1,11 +1,10 @@
 <?php
+// Start the session
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
-<body>
-
 <?php
 
 // default Heroku Postgres configuration URL
@@ -31,12 +30,11 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT * from product') as $row)
-{
- print "<p>$row[0]</p>\n\n";
-}
+$db->query(INSERT INTO customer (CustomerID, name, password, email, address1, city, state, zip)
+VALUES (1, $_POST["inputuserName4"], $_POST["inputPassword4"], $_POST["inputemail4"], $_POST["inputuserName4"],
+$_POST["inputAddress"], $_POST["inputCity"], $_POST["inputState"]);
+
 
 ?>
 
-</body>
 </html>

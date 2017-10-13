@@ -4,38 +4,43 @@ session_start();
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Andrew Martherus' Assignments Page</title>
-    <link rel="stylesheet" href="shoppingcart.css">
-    <script src="shoppingcart.js"></script>
-  </head>
-  <body>
+<body>
 
-    <h1>Your Order has been placed!</h1>
+<?php
 
-    <?php echo "Address: ".$_POST["address"];?></br>
-    <?php echo "City: ".$_POST["city"];?></br>
-    <?php echo "State: ".$_POST["state"];?></br>
-    <?php echo "Zip: ".$_POST["zip"];?></br>
+// default Heroku Postgres configuration URL
+$dbUrl = getenv('DATABASE_URL');
 
-    <ul class="list-group">
-      <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
-      </br><?php echo "$".$_SESSION["spongebob_price"];?>
-    </br><?php echo "Quantity: ".$_SESSION["spongebob_quantity"];?>
-      <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">
-      </br><?php echo "$".$_SESSION["patrick_price"];?>
-    </br><?php echo "Quantity: ".$_SESSION["patrick_quantity"];?>
-      <li class="list-group-item"><img src="../photos/Squidward.png" alt="Squidward" height="200" width="100">
-      </br><?php echo "$".$_SESSION["squidward_price"];?>
-    </br><?php echo "Quantity: ".$_SESSION["squidward_quantity"];?>
-      <li class="list-group-item"><img src="../photos/gary_the_snail.png" alt="Gary the Snail" height="200" width="100">
-      </br><?php echo "$".$_SESSION["gary_price"];?>
-    </br><?php echo "Quantity: ".$_SESSION["gary_quantity"];?>
-      <li class="list-group-item"><img src="../photos/Mr_Krabs.png" alt="Mr. Krabs" height="200" width="100">
-      </br><?php echo "$".$_SESSION["krab_price"];?>
-    </br><?php echo "Quantity: ".$_SESSION["krab_quantity"];?>
-    </ul>
+if (empty($dbUrl)) {
 
-  </body>
+}
 
+$dbopts = parse_url($dbUrl);
+
+print "<p>$dbUrl</p>\n\n";
+
+$dbHost = $dbopts["host"];
+$dbPort = $dbopts["port"];
+$dbUser = $dbopts["user"];
+$dbPassword = $dbopts["pass"];
+$dbName = ltrim($dbopts["path"],'/');
+
+print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
+
+try {
+ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+}
+catch (PDOException $ex) {
+ print "<p>error: $ex->getMessage() </p>\n\n";
+ die();
+}
+
+foreach ($db->query('SELECT now()') as $row)
+{
+ print "<p>$row[0]</p>\n\n";
+}
+
+?>
+
+</body>
 </html>

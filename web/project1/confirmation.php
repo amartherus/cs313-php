@@ -17,8 +17,6 @@ if (empty($dbUrl)) {
 
 $dbopts = parse_url($dbUrl);
 
-print "<p>$dbUrl</p>\n\n";
-
 $dbHost = $dbopts["host"];
 $dbPort = $dbopts["port"];
 $dbUser = $dbopts["user"];
@@ -35,7 +33,7 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT now()') as $row)
+foreach ($db->query('SELECT * from product') as $row)
 {
  print "<p>$row[0]</p>\n\n";
 }

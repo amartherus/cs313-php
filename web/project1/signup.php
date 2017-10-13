@@ -9,8 +9,8 @@ session_start();
 <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4" class="col-form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <label for="inputuserName4" class="col-form-label">Email</label>
+      <input type="userName" class="form-control" id="inputuserName4" placeholder="Username">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4" class="col-form-label">Password</label>
@@ -20,10 +20,6 @@ session_start();
   <div class="form-group">
     <label for="inputAddress" class="col-form-label">Address</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2" class="col-form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">

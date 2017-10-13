@@ -9,7 +9,7 @@ session_start();
 <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputuserName4" class="col-form-label">Email</label>
+      <label for="inputuserName4" class="col-form-label">Username</label>
       <input type="userName" class="form-control" id="inputuserName4" placeholder="Username">
     </div>
     <div class="form-group col-md-6">
@@ -35,14 +35,7 @@ session_start();
       <input type="text" class="form-control" id="inputZip">
     </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox"> Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Sign up</button>
 </form>
 
 <!-- bootstrap stuff -->

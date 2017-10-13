@@ -28,7 +28,6 @@ session_start();
     </div>
     <div class="form-group col-md-4">
       <label for="inputState" class="col-form-label">State</label>
-      <select id="inputState" class="form-control">Choose</select>
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip" class="col-form-label">Zip</label>

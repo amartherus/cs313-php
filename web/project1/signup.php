@@ -24,14 +24,15 @@ session_start();
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity" class="col-form-label">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <input type="text" class="form-control" id="inputCity" placeholder="Gilbert">
     </div>
     <div class="form-group col-md-4">
       <label for="inputState" class="col-form-label">State</label>
+      <input type="text" class="form-control" id="inputState" placeholder="AZ">
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip" class="col-form-label">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
+      <input type="text" class="form-control" id="inputZip" placeholder="85295">
     </div>
   </div>
   <button type="submit" class="btn btn-primary">Sign up</button>

@@ -38,14 +38,14 @@ foreach ($db->query('SELECT * from product
                       inner join purchaseLine on product.productID = purchaseLine.productID
                       inner join purchase on purchaseLine.purchaseID = purchase.purchaseID') as $purchase)
 {
-  print "$row[0]";
+  print "purchase stuff: "."$purchase[0]";
 }
 
 foreach ($db->query('SELECT * from customer where name=\'andrew\'') as $customer)
 {
 }
 
-print "Thank you for your purchase "."$row[1]!";
+print "Thank you for your purchase "."$customer[1]!";
 
 ?>
 

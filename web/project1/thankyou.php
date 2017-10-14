@@ -5,6 +5,9 @@ session_start();
 
 <!DOCTYPE html>
 <html>
+<h1>
+  Thank you for joining us!
+</h1>
 <?php
 
 // default Heroku Postgres configuration URL
@@ -31,7 +34,7 @@ catch (PDOException $ex) {
 }
 
 $db->query(INSERT INTO customer (CustomerID, name, password, email, address1, city, state, zip)
-VALUES (1, $_POST["inputuserName4"], $_POST["inputPassword4"], $_POST["inputemail4"], $_POST["inputuserName4"],
+VALUES (2, $_POST["inputuserName4"], $_POST["inputPassword4"], $_POST["inputemail4"], $_POST["inputuserName4"],
 $_POST["inputAddress"], $_POST["inputCity"], $_POST["inputState"]);
 
 

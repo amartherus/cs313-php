@@ -4,6 +4,9 @@ session_start();
 
 <!DOCTYPE html>
 <html>
+<h1>
+  Order Confirmation
+</h1>
 <body>
 
 <?php
@@ -33,8 +36,9 @@ catch (PDOException $ex) {
 
 foreach ($db->query('SELECT * from customer where name=\'andrew\'') as $row)
 {
- print "username: "."<p>$row[1]</p>\n\n";
 }
+
+print "Thank you for your purchase "."$row[1]!";
 
 ?>
 

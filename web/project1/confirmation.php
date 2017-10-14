@@ -34,7 +34,14 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT * from customer where name=\'andrew\'') as $row)
+foreach ($db->query('SELECT * from product
+                      inner join purchaseLine on product.productID = purchaseLine.productID
+                      inner join purchase on purchaseLine.purchaseID = purchase.purchaseID') as $purchase)
+{
+  print "$row[0]";
+}
+
+foreach ($db->query('SELECT * from customer where name=\'andrew\'') as $customer)
 {
 }
 

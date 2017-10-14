@@ -38,9 +38,9 @@ foreach ($db->query('SELECT product.name, purchaseLine.purchaseLineID, purchase.
                       inner join purchaseLine on product.productID = purchaseLine.productID
                       inner join purchase on purchaseLine.purchaseID = purchase.purchaseID') as $purchase)
 {
-  print "product name: "."$purchase[0]\n";
-  print "purchaseLine id: "."$purchase[1]\n";
-  print "purchase id: "."$purchase[2]\n";
+  print "product name: "."$purchase[0]</br>";
+  print "purchaseLine id: "."$purchase[1]</br>";
+  print "purchase id: "."$purchase[2]</br>";
 }
 
 foreach ($db->query('SELECT * from customer where name=\'andrew\'') as $customer)

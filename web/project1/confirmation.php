@@ -31,7 +31,7 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT * from customer') as $row)
+foreach ($db->query('SELECT * from customer where name=\'andrew\'') as $row)
 {
  print "username: "."<p>$row[1]</p>\n\n";
 }

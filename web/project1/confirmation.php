@@ -33,7 +33,7 @@ catch (PDOException $ex) {
 
 foreach ($db->query('SELECT * from customer') as $row)
 {
- print "<p>$row</p>\n\n";
+ print "username: "."<p>$row[1]</p>\n\n";
 }
 
 ?>

@@ -26,7 +26,7 @@ echo 'city: '.$city;
 echo 'state: '.$state;
 echo 'zip: '.$zip;
 
-require("confirmation.php");
+require("dbconnect.php");
 $db = get_db();
 
 $query = 'INSERT INTO purchase(name, password, email, address1, city, state, zip) VALUES(:username, :password, :email, :address, :city, :state, :zip)';

@@ -6,7 +6,7 @@ session_start();
 
 <!DOCTYPE html>
 <html>
-<form action="thankyou.php" method="post">
+<form action="insertCustomer.php" method="post">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputuserName4" class="col-form-label">Username</label>

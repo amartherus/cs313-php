@@ -32,6 +32,19 @@ $db = get_db();
 $query = 'INSERT INTO purchase(name, password, email, address1, city, state, zip) VALUES(:username, :password, :email, :address, :city, :state, :zip)';
 $statement = $db->prepare($query);
 
+$statement->bindValue(':username', $username);
+$statement->bindValue(':password', $password);
+$statement->bindValue(':email', $email);
+$statement->bindValue(':address', $address);
+$statement->bindValue(':city', $city);
+$statement->bindValue(':state', $state);
+$statement->bindValue(':zip', $zip);
+
+$statement->execute();
+
+header("Location: browseItems.php");
+
+die();
 
 ?>
 

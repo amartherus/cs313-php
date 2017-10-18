@@ -19,8 +19,10 @@ echo 'zip: '.$zip;
 require("dbconnect.php");
 $db = get_db();
 
-$query = 'INSERT INTO customer(name, password, email, address1, city, state, zip)
-                VALUES(:username, :password, :email, :address, :city, :state, :zip)';
+try {
+
+$query = "INSERT INTO customer(name, password, email, address1, city, state, zip)
+                VALUES(:username, :password, :email, :address, :city, :state, :zip)";
 $statement = $db->prepare($query);
 
 $statement->bindValue(':username', $username);
@@ -33,7 +35,16 @@ $statement->bindValue(':zip', $zip);
 
 $statement->execute();
 
-//header("Location: browseItems.php");
+}
+catch (Exception $ex)
+{
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB.";
+	die();
+}
+
+header("Location: browseItems.php");
 
 die();
 

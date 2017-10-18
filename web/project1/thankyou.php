@@ -17,7 +17,7 @@ $address = $_POST["inputAddress"];
 $city = $_POST["inputCity"];
 $state = $_POST["inputState"];
 
-echo $username;
+echo 'username: $username';
 
 
 ?>

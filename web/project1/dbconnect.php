@@ -25,7 +25,7 @@ function get_db() {
     die();
   }
 
-  echo "exiting dbconnect.php";
+  echo "\n db variable: ".$db."\n";
   return $db;
 }
 

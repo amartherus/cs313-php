@@ -6,7 +6,7 @@ function get_db() {
   $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
-
+    echo "I have an empty dburl!!!"
   }
 
   $dbopts = parse_url($dbUrl);

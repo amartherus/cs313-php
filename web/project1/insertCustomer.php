@@ -1,14 +1,4 @@
 <?php
-// Start the session
-session_start();
-?>
-
-<!DOCTYPE html>
-<html>
-<h1>
-  Thank you for joining us!
-</h1>
-<?php
 
 $username = $_POST["inputuserName4"];
 $password = $_POST["inputPassword4"];
@@ -29,7 +19,7 @@ echo 'zip: '.$zip;
 require("dbconnect.php");
 $db = get_db();
 
-$query = 'INSERT INTO customer(name, password, email, address1, city, state, zip) 
+$query = 'INSERT INTO customer(name, password, email, address1, city, state, zip)
                 VALUES(:username, :password, :email, :address, :city, :state, :zip)';
 $statement = $db->prepare($query);
 
@@ -43,10 +33,8 @@ $statement->bindValue(':zip', $zip);
 
 $statement->execute();
 
-header("Location: browseItems.php");
+//header("Location: browseItems.php");
 
 die();
 
 ?>
-
-</html>

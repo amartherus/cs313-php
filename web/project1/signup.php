@@ -34,6 +34,10 @@ session_start();
       <label for="inputState" class="col-form-label">State</label>
       <input type="text" class="form-control" name="inputState" placeholder="AZ">
     </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip" class="col-form-label">Zip</label>
+      <input type="text" class="form-control" name="inputZip" placeholder="85295">
+    </div>
   </div>
   <button type="submit" class="btn btn-primary">Sign up</button>
 </form>

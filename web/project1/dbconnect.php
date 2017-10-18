@@ -24,8 +24,7 @@ function get_db() {
     print "<p>error: $ex->getMessage() </p>\n\n";
     die();
   }
-
-  echo "\n db variable: ".$db."\n";
+  
   return $db;
 }
 

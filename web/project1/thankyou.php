@@ -29,8 +29,6 @@ echo 'zip: '.$zip;
 require("dbconnect.php");
 $db = get_db();
 
-echo "db: ".$db;
-
 $query = 'INSERT INTO purchase(name, password, email, address1, city, state, zip) VALUES(:username, :password, :email, :address, :city, :state, :zip)';
 $statement = $db->prepare($query);
 
@@ -43,8 +41,6 @@ $statement->bindValue(':state', $state);
 $statement->bindValue(':zip', $zip);
 
 $statement->execute();
-
-echo 'statement: '.$statement;
 
 header("Location: browseItems.php");
 

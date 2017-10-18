@@ -20,10 +20,13 @@ require("dbconnect.php");
 $db = get_db();
 
 try {
+  echo "here1\n";
 
 $query = "INSERT INTO customer(name, password, email, address1, city, state, zip)
                 VALUES(:username, :password, :email, :address, :city, :state, :zip)";
+echo "here2\n";
 $statement = $db->prepare($query);
+echo "here3\n";
 
 $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $password);

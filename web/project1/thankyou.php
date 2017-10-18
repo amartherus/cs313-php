@@ -18,6 +18,12 @@ $city = $_POST["inputCity"];
 $state = $_POST["inputState"];
 
 echo 'username: '.$username;
+echo 'password: '.$password;
+echo 'email: '.$email;
+echo 'address: '.$address;
+echo 'city: '.$city;
+echo 'state: '.$state;
+
 
 
 ?>

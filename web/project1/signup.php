@@ -10,7 +10,7 @@ session_start();
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputuserName4" class="col-form-label">Username</label>
-      <input type="userName" class="form-control" id="inputuserName4" placeholder="Username">
+      <input type="userName" class="form-control" name="inputuserName4" placeholder="Username">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4" class="col-form-label">Password</label>

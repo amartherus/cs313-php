@@ -42,6 +42,8 @@ $statement->bindValue(':zip', $zip);
 
 $statement->execute();
 
+echo 'statement: '.$statement;
+
 header("Location: browseItems.php");
 
 die();

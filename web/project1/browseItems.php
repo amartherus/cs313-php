@@ -11,36 +11,28 @@ session_start();
     <link rel="stylesheet" href="shoppingcart.css">
     <script src="shoppingcart.js"></script>
   </head>
-  <h1>Welcome to the Spongebob Date page! </br>Buy a date with your favorite Spongebob character!</h1>
+  <h1>Get the best electronics at the lowest prices!</h1>
   <body>
     <form action="cart.php" method="post">
       <ul class="list-group">
-        <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
-        </br><p name="spongebob_price">$300.00</p>
-        </br><input type="number" name="spongebob_quantity"></li>
-        <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">
-        </br><p name="patrick_price">$200.00</p>
-          </br><input type="number" name="patrick_quantity"></li>
-        <li class="list-group-item"><img src="../photos/Squidward.png" alt="Squidward" height="200" width="100">
-        </br><p name="squidward_price">$1.00</p>
-          </br><input type="number" name="squidward_quantity"></li>
-        <li class="list-group-item"><img src="../photos/gary_the_snail.png" alt="Gary the Snail" height="200" width="100">
-        </br><p name="gary_price">$100.00</p>
-          </br><input type="number" name="gary_quantity"></li>
-        <li class="list-group-item"><img src="../photos/Mr_Krabs.png" alt="Mr. Krabs" height="200" width="100">
-        </br><p name="krab_price">$100000.00</p>
-          </br><input type="number" name="krab_quantity"></li>
+        <li class="list-group-item"><img src="photos/hoverboard.jpg" alt="hoverboard" height="200" width="100">
+        </br><p name="hoverboard_price">$100.00</p>
+      </br><input type="number" name="hoverboard_price"></li>
+        <li class="list-group-item"><img src="../photos/iphonex.jpg" alt="iphonex" height="200" width="100">
+        </br><p name="iphonex_price">$998.00</p>
+      </br><input type="number" name="iphonex_price"></li>
+        <li class="list-group-item"><img src="/photos/timemachine.jpg" alt="time machine" height="200" width="100">
+        </br><p name="timemachine_price">$14.00</p>
+      </br><input type="number" name="timemachine_price"></li>
 
       </ul>
     </br>
 
     <?php
     //price values need to be saved
-    $_SESSION["spongebob_price"] = 300.00;
-    $_SESSION["patrick_price"] = 200.00;
-    $_SESSION["squidward_price"] = 1.00;
-    $_SESSION["gary_price"] = 100.00;
-    $_SESSION["krab_price"] = 100000.00;
+    $_SESSION["hoverboard_price"] = 100.00;
+    $_SESSION["iphonex_price"] = 998.00;
+    $_SESSION["timemachine_price"] = 14.00;
 
      ?>
 

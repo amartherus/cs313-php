@@ -13,8 +13,24 @@ session_start();
   </head>
   <h1>Get the best electronics at the lowest prices!</h1>
   <body>
-    <button class="login" onclick="window.location.href='login.php'">login</button>
+
+    <!-- log in form -->
+    <form action="login.php" method="post">
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- sign up button -->
     <button class="signup" onclick="window.location.href='signup.php'">Sign up here</button>
+
+    <!-- shopping information -->
     <form action="cart.php" method="post">
       <ul class="list-group">
         <li class="list-group-item"><img src="photos/hoverboard.jpg" alt="hoverboard" height="400" width="300">
@@ -35,6 +51,9 @@ session_start();
     $_SESSION["hoverboard_price"] = 100;
     $_SESSION["iphonex_price"] = 998;
     $_SESSION["timemachine_price"] = 14;
+
+    echo "username: ".$_SESSION["username"];
+    echo "password: ".$_SESSION["password"];
 
      ?>
 

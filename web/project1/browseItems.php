@@ -13,8 +13,8 @@ session_start();
   </head>
   <h1>Get the best electronics at the lowest prices!</h1>
   <body>
+    <button class="login" onclick="window.location.href='login.php'">login</button>
     <button class="signup" onclick="window.location.href='signup.php'">Sign up here</button>
-    <button class="login" onclick="window.location.href='login.php'">Sign up here</button>
     <form action="cart.php" method="post">
       <ul class="list-group">
         <li class="list-group-item"><img src="photos/hoverboard.jpg" alt="hoverboard" height="400" width="300">

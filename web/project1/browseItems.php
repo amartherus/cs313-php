@@ -18,10 +18,10 @@ session_start();
         <li class="list-group-item"><img src="photos/hoverboard.jpg" alt="hoverboard" height="200" width="100">
         </br><p name="hoverboard_price">$100.00</p>
       </br><input type="number" name="hoverboard_price"></li>
-        <li class="list-group-item"><img src="../photos/iphonex.jpg" alt="iphonex" height="200" width="100">
+        <li class="list-group-item"><img src="photos/iphonex.jpg" alt="iphonex" height="200" width="100">
         </br><p name="iphonex_price">$998.00</p>
       </br><input type="number" name="iphonex_price"></li>
-        <li class="list-group-item"><img src="/photos/timemachine.jpg" alt="time machine" height="200" width="100">
+        <li class="list-group-item"><img src="photos/timemachine.jpg" alt="time machine" height="200" width="100">
         </br><p name="timemachine_price">$14.00</p>
       </br><input type="number" name="timemachine_price"></li>
 

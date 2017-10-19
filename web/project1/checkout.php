@@ -13,34 +13,17 @@ session_start();
 Does this appear correct?</br>
 
     <form action="confirmation.php" method="post">
-        <ul class="list-group">
-          <li class="list-group-item"><img src="../photos/spongebob.png" alt="Spongebob" height="200" width="100">
-          </br><?php echo "$".$_SESSION["spongebob_price"];?>
-        </br><?php echo "Quantity: ".$_SESSION["spongebob_quantity"];?>
-          <li class="list-group-item"><img src="../photos/Patrick.png" alt="Patrick" height="200" width="100">
-          </br><?php echo "$".$_SESSION["patrick_price"];?>
-        </br><?php echo "Quantity: ".$_SESSION["patrick_quantity"];?>
-          <li class="list-group-item"><img src="../photos/Squidward.png" alt="Squidward" height="200" width="100">
-          </br><?php echo "$".$_SESSION["squidward_price"];?>
-        </br><?php echo "Quantity: ".$_SESSION["squidward_quantity"];?>
-          <li class="list-group-item"><img src="../photos/gary_the_snail.png" alt="Gary the Snail" height="200" width="100">
-          </br><?php echo "$".$_SESSION["gary_price"];?>
-        </br><?php echo "Quantity: ".$_SESSION["gary_quantity"];?>
-          <li class="list-group-item"><img src="../photos/Mr_Krabs.png" alt="Mr. Krabs" height="200" width="100">
-          </br><?php echo "$".$_SESSION["krab_price"];?>
-        </br><?php echo "Quantity: ".$_SESSION["krab_quantity"];?>
-        </ul>
-
-        <p>Please enter your address:</p></br>
-        <ul class="list-group">
-          <li class="list-group-item">Address: <input type="text" name="address"></br>
-          <li class="list-group-item">City: <input type="text" name="city"></br>
-          <li class="list-group-item">State: <input type="text" name="state"></br>
-          <li class="list-group-item">Zip: <input type="text" name="zip"></br>
-
-        </ul>
-
-
+      <ul class="list-group">
+        <li class="list-group-item"><img src="photos/hoverboard.jpg" alt="hoverboard" height="400" width="300">
+        </br><?php echo "$".$_SESSION["hoverboard_price"];?>
+      </br><?php echo "Quantity: ".$_SESSION["hoverboard_quantity"];?>
+        <li class="list-group-item"><img src="photos/iphonex.jpg" alt="iphonex" height="400" width="300">
+        </br><?php echo "$".$_SESSION["iphonex_price"];?>
+      </br><?php echo "Quantity: ".$_SESSION["iphonex_quantity"];?>
+        <li class="list-group-item"><img src="photos/timemachine.jpg" alt="time machine" height="400" width="300">
+        </br><?php echo "$".$_SESSION["timemachine_price"];?>
+      </br><?php echo "Quantity: ".$_SESSION["timemachine_quantity"];?>
+      </ul>
 
         <input type="submit" value="Complete Order">
       </form>

@@ -13,26 +13,28 @@ session_start();
   </head>
   <h1>Get the best electronics at the lowest prices!</h1>
   <body>
+    <button class="signup" onclick="window.location.href='signup.php'">Sign up here</button>
+    <button class="login" onclick="window.location.href='login.php'">Sign up here</button>
     <form action="cart.php" method="post">
       <ul class="list-group">
         <li class="list-group-item"><img src="photos/hoverboard.jpg" alt="hoverboard" height="400" width="300">
         </br><p name="hoverboard_price">$100.00</p>
-      </br><input type="number" name="hoverboard_price"></li>
+      </br><input type="number" name="hoverboard_quantity"></li>
         <li class="list-group-item"><img src="photos/iphonex.jpg" alt="iphonex" height="400" width="300">
         </br><p name="iphonex_price">$998.00</p>
-      </br><input type="number" name="iphonex_price"></li>
+      </br><input type="number" name="iphonex_quantity"></li>
         <li class="list-group-item"><img src="photos/timemachine.jpg" alt="time machine" height="400" width="300">
         </br><p name="timemachine_price">$14.00</p>
-      </br><input type="number" name="timemachine_price"></li>
+      </br><input type="number" name="timemachine_quantity"></li>
 
       </ul>
     </br>
 
     <?php
     //price values need to be saved
-    $_SESSION["hoverboard_price"] = 100.00;
-    $_SESSION["iphonex_price"] = 998.00;
-    $_SESSION["timemachine_price"] = 14.00;
+    $_SESSION["hoverboard_price"] = 100;
+    $_SESSION["iphonex_price"] = 998;
+    $_SESSION["timemachine_price"] = 14;
 
      ?>
 

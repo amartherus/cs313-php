@@ -19,7 +19,7 @@ session_start();
 
   <div class="login">
     <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <input type="text" placeholder="Enter Username" name="username" required></br>
 
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>

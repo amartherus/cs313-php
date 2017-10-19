@@ -2,7 +2,7 @@
 
 $username = $_POST["inputuserName4"];
 $password = $_POST["inputPassword4"];
-$email = $_POST["inputemail4"];
+$email = $_POST["inputEmail4"];
 $address = $_POST["inputAddress"];
 $city = $_POST["inputCity"];
 $state = $_POST["inputState"];

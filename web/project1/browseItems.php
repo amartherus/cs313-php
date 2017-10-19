@@ -17,7 +17,7 @@ session_start();
     <!-- log in form -->
     <form action="login.php" method="post">
 
-  <div class="container">
+  <div class="login">
     <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="username" required>
 
@@ -25,6 +25,7 @@ session_start();
     <input type="password" placeholder="Enter Password" name="password" required>
 
     <button type="submit">Login</button>
+  </div>
   </form>
 
   <!-- sign up button -->

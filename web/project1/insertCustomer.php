@@ -21,8 +21,8 @@ $db = get_db();
 
 try {
 
-$query = 'INSERT INTO customer(customerid, name, password, email, address1, city, state, zip)
-                VALUES(customer_pkey, :username, :password, :email, :address, :city, :state, :zip)';
+$query = 'INSERT INTO customer(name, password, email, address1, city, state, zip)
+                VALUES(:username, :password, :email, :address, :city, :state, :zip)';
 $statement = $db->prepare($query);
 
 $statement->bindValue(':username', $username);

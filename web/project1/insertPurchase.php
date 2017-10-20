@@ -12,6 +12,9 @@ echo "total: ".$total."<br>";
 $username = $_SESSION["username"];
 $password = $_SESSION["password"];
 
+echo $username;
+echo $password;
+
 //for the purchaseLine table
 //$purchaseid
 $hoverboardid = getProductID($_SESSION["hoverboard"]);

@@ -31,8 +31,8 @@ try {
   //I'll have to write a select statement to get this value
   foreach ($db->query('SELECT customerid
                       from customer
-                      where name=:username
-                      AND password=:password') as $customerid);
+                      where name=$username
+                      AND password=$password') as $customerid);
   {
     echo "customerid: </br>";
   }

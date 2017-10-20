@@ -31,7 +31,7 @@ try {
                       where name=:username
                       AND password=:password') as $customerid);
   {
-    echo "customerid: ".$customerid[0]."</br>";
+    echo "customerid: </br>";
   }
 
   $query = 'INSERT INTO purchase(customerid, totalamount)

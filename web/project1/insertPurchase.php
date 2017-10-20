@@ -27,7 +27,7 @@ try {
                       where name=$_SESSION["username"]
                       AND password=$_SESSION["password"]') as $customerid);
   {
-    echo "customerid: ".$customerid."</br>";
+    echo "customerid: ".$customerid[0]."</br>";
   }
 
   $query = 'INSERT INTO purchase(customerid, totalamount)

@@ -25,7 +25,7 @@ try {
   foreach ($db->query("SELECT customerid
                       from customer
                       where name='{$_SESSION['username']}'
-                      AND password='{$_SESSION['password']}')" as $customerid);
+                      AND password='{$_SESSION['password']}'") as $customerid);
   {
     echo "customerid: </br>";
   }

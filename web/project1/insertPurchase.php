@@ -22,6 +22,7 @@ require("dbconnect.php");
 $db = get_db();
 
 try {
+  echo $username;
 
   //I'll have to write a select statement to get this value
   $customerid = "SELECT customerid

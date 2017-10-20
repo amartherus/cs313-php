@@ -8,6 +8,10 @@ $total = $_SESSION["hoverboard_price"]*$_SESSION["hoverboard_quantity"] +
 
 echo "total: ".$total."<br>";
 
+//for the where clause in purchase insert
+$username = $_SESSION["username"];
+$password = $_SESSION["password"];
+
 //for the purchaseLine table
 //$purchaseid
 $hoverboardid = getProductID($_SESSION["hoverboard"]);
@@ -24,8 +28,8 @@ try {
   //I'll have to write a select statement to get this value
   foreach ($db->query('SELECT customerid
                       from customer
-                      where name=$_SESSION["username"]
-                      AND password=$_SESSION["password"]') as $customerid);
+                      where name=:username
+                      AND password=:password') as $customerid);
   {
     echo "customerid: ".$customerid[0]."</br>";
   }

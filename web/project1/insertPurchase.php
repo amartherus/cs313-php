@@ -22,13 +22,13 @@ $db = get_db();
 try {
 
   //I'll have to write a select statement to get this value
-  foreach ($db->query("SELECT customerid
-                      from customer
-                      where name='{$_SESSION['username']}'
-                      AND password='{$_SESSION['password']}'") as $customerid);
-  {
-    echo "customerid: </br>";
-  }
+  $customerid = "SELECT customerid
+              from customer
+              where name='{$_SESSION['username']}'
+              AND password='{$_SESSION['password']}'";
+
+  echo $customerid;
+
 
   $query = 'INSERT INTO purchase(customerid, totalamount)
                   VALUES(:customerid, :total)';

@@ -15,6 +15,8 @@ $iphonexid = getProductID($_SESSION["iphonex"]);
 $timemachineid = getProductID($_SESSION["timemachine"]);
 //$quantity
 
+$username = $_SESSION["username"];
+$password = $_SESSION["password"];
 
 require("dbconnect.php");
 $db = get_db();
@@ -24,8 +26,8 @@ try {
   //I'll have to write a select statement to get this value
   $customerid = "SELECT customerid
               from customer
-              where name='{$_SESSION['username']}'
-              AND password='{$_SESSION['password']}'";
+              where name='$username'
+              AND password='$password'";
 
   echo "customerid: ".$customerid;
 

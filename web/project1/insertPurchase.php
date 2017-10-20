@@ -11,9 +11,10 @@ echo $_SESSION["username"]."<br>";
 
 //for the purchaseLine table
 //$purchaseid
-$hoverboardid = getProductID($_SESSION["hoverboard"]);
-$iphonexid = getProductID($_SESSION["iphonex"]);
-$timemachineid = getProductID($_SESSION["timemachine"]);
+
+$hoverboardid = "<script>getProductID($_SESSION['hoverboard'])</script>";
+//$iphonexid = getProductID($_SESSION["iphonex"]);
+//$timemachineid = getProductID($_SESSION["timemachine"]);
 
 echo $hoverboardid;
 //$quantity

@@ -7,6 +7,7 @@ $total = $_SESSION["hoverboard_price"]*$_SESSION["hoverboard_quantity"] +
         $_SESSION["timemachine_price"]*$_SESSION["timemachine_quantity"];
 
 echo "total: ".$total."<br>";
+echo $_SESSION["username"];
 
 //for the purchaseLine table
 //$purchaseid
@@ -15,14 +16,10 @@ $iphonexid = getProductID($_SESSION["iphonex"]);
 $timemachineid = getProductID($_SESSION["timemachine"]);
 //$quantity
 
-$username = $_SESSION["username"];
-$password = $_SESSION["password"];
-
 require("dbconnect.php");
 $db = get_db();
 
 try {
-  echo $username;
 
   //I'll have to write a select statement to get this value
   $customerid = "SELECT customerid

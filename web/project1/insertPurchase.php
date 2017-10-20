@@ -22,12 +22,6 @@ $db = get_db();
 try {
 
   //I'll have to write a select statement to get this value
-  $customerid = "SELECT customerid
-              from customer
-              where name='$username';
-
-  echo "customerid: ".$customerid;
-
 
   $query = 'INSERT INTO purchase(customerid, totalamount)
                   VALUES(:customerid, :total)';

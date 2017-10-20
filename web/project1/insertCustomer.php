@@ -8,14 +8,6 @@ $city = $_POST["inputCity"];
 $state = $_POST["inputState"];
 $zip = $_POST["inputZip"];
 
-echo 'username: '.$username;
-echo 'password: '.$password;
-echo 'email: '.$email;
-echo 'address: '.$address;
-echo 'city: '.$city;
-echo 'state: '.$state;
-echo 'zip: '.$zip;
-
 require("dbconnect.php");
 $db = get_db();
 

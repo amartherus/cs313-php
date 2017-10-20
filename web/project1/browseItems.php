@@ -22,7 +22,7 @@ session_start();
     <input type="text" placeholder="Enter Username" name="username" required></br>
 
     <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input type="password" placeholder="Enter Password" name="password" required></br>
 
     <button type="submit">Login</button>
   </div>
@@ -52,9 +52,6 @@ session_start();
     $_SESSION["hoverboard_price"] = 100;
     $_SESSION["iphonex_price"] = 998;
     $_SESSION["timemachine_price"] = 14;
-
-    echo "username: ".$_SESSION["username"];
-    echo "password: ".$_SESSION["password"];
 
      ?>
 

@@ -12,7 +12,7 @@ session_start();
   <body>
 Does this appear correct?</br>
 
-    <form action="confirmation.php" method="post">
+    <form action="insertPurchase.php" method="post">
       <ul class="list-group">
         <li class="list-group-item"><img src="photos/hoverboard.jpg" alt="hoverboard" height="400" width="300">
         </br><?php echo "$".$_SESSION["hoverboard_price"];?>

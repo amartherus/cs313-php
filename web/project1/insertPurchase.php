@@ -26,8 +26,7 @@ try {
   //I'll have to write a select statement to get this value
   $customerid = "SELECT customerid
               from customer
-              where name='$username'
-              AND password='$password'";
+              where name='$username';
 
   echo "customerid: ".$customerid;
 

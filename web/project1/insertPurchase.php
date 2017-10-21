@@ -9,29 +9,22 @@ $total = $_SESSION["hoverboard_price"]*$_SESSION["hoverboard_quantity"] +
 echo "total: ".$total."<br>";
 echo $_SESSION["username"]."<br>";
 
-//$username = $_SESSION["username"];
-//$username = mysql_real_escape_string($username);
-
-//for the purchaseLine table
-//$purchaseid
-
-//$quantity
-
 require("dbconnect.php");
 $db = get_db();
+try {
 
   //select statements for the 3 products
-  foreach($db->query('SELECT * from product') as $hoverboardid)
+  foreach($db->query('SELECT * from product where name=\'hoverboard\'') as $hoverboardid)
   {
-    print "$hoverboardid[0]";
+    echo "$hoverboardid[0]";
   }
   foreach($db->query($iphonexid = 'SELECT productid from product where name=\'iphonex\'') as $iphonexid)
   {
-    print "2";
+    echo "$iphonexid[0]";
   }
   foreach($db->query($timemachineid = 'SELECT productid from product where name=\'timemachine\'') as $timemachineid)
   {
-    print "3";
+    echo "$timemachineid[0]";
   }
 
 /*  print "hoverboardid: ".$hoverboardid."</br>";
@@ -50,5 +43,13 @@ $db = get_db();
   $statement->bindValue(':customerid', $customerid);
   $statement->bindValue(':total', $total);
   */
+}
+catch (Exception $ex)
+{
+	// Please be aware that you don't want to output the Exception message in
+	// a production environment
+	echo "Error with DB. Details: $ex";
+	die();
+}
 
 ?>

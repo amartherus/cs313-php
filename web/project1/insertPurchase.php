@@ -38,7 +38,8 @@ try {
   {
     print "3";
   }
-  print "hoverboardid: ".$hoverboardid."</br>";
+
+/*  print "hoverboardid: ".$hoverboardid."</br>";
   print "iphonexid: ".$iphonexid."</br>";
   print "timemachineid: ".$timemachineid."</br>";
 
@@ -53,6 +54,7 @@ try {
 
   $statement->bindValue(':customerid', $customerid);
   $statement->bindValue(':total', $total);
+  */
 }
 catch (Exception $ex)
 {

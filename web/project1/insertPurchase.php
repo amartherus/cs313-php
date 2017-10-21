@@ -28,19 +28,19 @@ try {
   //select statements for the 3 products
   foreach($db->query("SELECT productid from product where name='hoverboard'") as $hoverboardid)
   {
-    echo "1";
+    print "1";
   }
   foreach($db->query($iphonexid = "SELECT productid from product where name='iphonex'") as $iphonexid)
   {
-    echo "2";
+    print "2";
   }
   foreach($db->query($timemachineid = "SELECT productid from product where name='timemachine'") as $timemachineid)
   {
-    echo "3";
+    print "3";
   }
-  echo "hoverboardid: ".$hoverboardid."</br>";
-  echo "iphonexid: ".$iphonexid."</br>";
-  echo "timemachineid: ".$timemachineid."</br>";
+  print "hoverboardid: ".$hoverboardid."</br>";
+  print "iphonexid: ".$iphonexid."</br>";
+  print "timemachineid: ".$timemachineid."</br>";
 
   //get the customerid
   $db->query("SELECT customerid from customer where name='$username'") as $customerid;

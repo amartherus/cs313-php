@@ -25,7 +25,7 @@ try {
   //select statements for the 3 products
   foreach($db->query('SELECT * from product') as $hoverboardid)
   {
-    print $hoverboardid[0];
+    print "$hoverboardid[0]";
   }
   foreach($db->query($iphonexid = 'SELECT productid from product where name=\'iphonex\'') as $iphonexid)
   {

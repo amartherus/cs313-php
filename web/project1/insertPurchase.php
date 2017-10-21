@@ -26,7 +26,7 @@ try {
   {
     //echo "$timemachineid[0]";
   }
-  foreach($db->query('SELECT customerid from customer where name=$username') as $customerid)
+  foreach($db->query('SELECT customerid from customer where name='."$username") as $customerid)
   {
     echo "$customerid[0]";
   }

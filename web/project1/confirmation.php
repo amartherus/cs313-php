@@ -23,11 +23,11 @@ foreach ($db->query('SELECT product.name, purchaseline.quantity, purchase.totala
   print "Order Total: "."$purchase[2]</br>";
 }
 
-foreach ($db->query('SELECT * from customer where name=\'andrew\'') as $customer)
+foreach ($db->query('SELECT * from customer where name=$_SESSION(\'username\')') as $customer)
 {
 }
 
-print "Thank you for your purchase "."$customer[1]!";
+print "Thank you for your purchase "."$customer[0]!";
 
 ?>
 

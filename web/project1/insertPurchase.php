@@ -26,7 +26,7 @@ try {
   {
     //echo "$timemachineid[0]";
   }
-  $username = 'SELECT customerid from customer where name=\''."$username".'\'';
+  $username = 'SELECT customerid from customer where name=$_SESSION[\'username\']';
   foreach($db->query($username) as $customerid)
   {
     echo "$customerid[0]";
@@ -49,5 +49,9 @@ catch (Exception $ex)
 	echo "Error with DB. Details: $ex";
 	die();
 }
+
+header("Location: confirmation.php");
+
+die();
 
 ?>

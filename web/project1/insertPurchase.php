@@ -26,15 +26,15 @@ $db = get_db();
 try {
 
   //select statements for the 3 products
-  foreach($db->query("SELECT productid from product where name='hoverboard'") as $hoverboardid)
+  foreach($db->query('SELECT productid from product where name=\'hoverboard\'') as $hoverboardid)
   {
     print "1";
   }
-  foreach($db->query($iphonexid = "SELECT productid from product where name='iphonex'") as $iphonexid)
+  foreach($db->query($iphonexid = 'SELECT productid from product where name=\'iphonex\'') as $iphonexid)
   {
     print "2";
   }
-  foreach($db->query($timemachineid = "SELECT productid from product where name='timemachine'") as $timemachineid)
+  foreach($db->query($timemachineid = "\'SELECT productid from product where name=\'timemachine\'') as $timemachineid)
   {
     print "3";
   }

@@ -25,7 +25,7 @@ try {
   //select statements for the 3 products
   foreach($db->query('SELECT * from product') as $hoverboardid)
   {
-    print product[0];
+    print $hoverboardid[0];
   }
   foreach($db->query($iphonexid = 'SELECT productid from product where name=\'iphonex\'') as $iphonexid)
   {
@@ -57,7 +57,7 @@ catch (Exception $ex)
 {
 	// Please be aware that you don't want to output the Exception message in
 	// a production environment
-	print "Error with DB. Details: $ex";
+	echo "Error with DB. Details: $ex";
 	die();
 }
 

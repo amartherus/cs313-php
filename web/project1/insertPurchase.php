@@ -9,6 +9,9 @@ $total = $_SESSION["hoverboard_price"]*$_SESSION["hoverboard_quantity"] +
 echo "total: ".$total."<br>";
 echo $_SESSION["username"]."<br>";
 
+$username = $_SESSION["username"];
+$username = mysql_real_escape_string($username);
+
 //for the purchaseLine table
 //$purchaseid
 
@@ -22,15 +25,21 @@ $db = get_db();
 
 try {
 
-  //I'll have to write a select statement to get this value
+  //select statements for the 3 products
   $hoverboardid = "SELECT productid from product where name='hoverboard'";
   $iphonexid = "SELECT productid from product where name='iphonex'";
   $timemachineid = "SELECT productid from product where name='timemachine'";
 
-  echo "hoverboardid: ".$hoverboardid."</br>";
+  //get the customerid
+  $customerid = "SELECT customerid from customer where name='$username'";
 
-  $query = 'INSERT INTO purchase(customerid, totalamount)
-                  VALUES(:customerid, :total)';
+  $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
+                    VALUES(:customerid, :total)';
+
+  $statement = $db->prepare($insertPurchase);
+
+  $statement->bindValue(':customerid', $customerid);
+  $statement->bindValue(':total', $total);
 }
 catch (Exception $ex)
 {

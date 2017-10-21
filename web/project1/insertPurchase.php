@@ -18,15 +18,16 @@ try {
   {
     //echo "$hoverboardid[0]";
   }
-  foreach($db->query($iphonexid = 'SELECT productid from product where name=\'iphonex\'') as $iphonexid)
+  foreach($db->query('SELECT productid from product where name=\'iphonex\'') as $iphonexid)
   {
     //echo "$iphonexid[0]";
   }
-  foreach($db->query($timemachineid = 'SELECT productid from product where name=\'timemachine\'') as $timemachineid)
+  foreach($db->query('SELECT productid from product where name=\'timemachine\'') as $timemachineid)
   {
     //echo "$timemachineid[0]";
   }
-  foreach($db->query('SELECT customerid from customer where name='."$username") as $customerid)
+  $username = 'SELECT customerid from customer where name='."$username";
+  foreach($db->query($username) as $customerid)
   {
     echo "$customerid[0]";
   }

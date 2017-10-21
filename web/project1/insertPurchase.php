@@ -26,12 +26,16 @@ $db = get_db();
 try {
 
   //select statements for the 3 products
-  $hoverboardid = "SELECT productid from product where name='hoverboard'";
-  $iphonexid = "SELECT productid from product where name='iphonex'";
-  $timemachineid = "SELECT productid from product where name='timemachine'";
+  $db->query("SELECT productid from product where name='hoverboard'") as $hoverboardid;
+  $db->query($iphonexid = "SELECT productid from product where name='iphonex'") as $iphonexid;
+  $db->query($timemachineid = "SELECT productid from product where name='timemachine'") as $timemachineid;
+  echo "hoverboardid: ".$hoverboardid."</br>";
+  echo "iphonexid: ".$iphonexid."</br>";
+  echo "timemachineid: ".$timemachineid."</br>";
 
   //get the customerid
-  $customerid = "SELECT customerid from customer where name='$username'";
+  $db->query("SELECT customerid from customer where name='$username'") as $customerid;
+  echo "customerid: ".$customerid."</br>";
 
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';

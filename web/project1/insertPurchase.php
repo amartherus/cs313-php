@@ -15,9 +15,6 @@ $username = mysql_real_escape_string($username);
 //for the purchaseLine table
 //$purchaseid
 
-
-
-echo $hoverboardid;
 //$quantity
 
 require("dbconnect.php");
@@ -26,9 +23,9 @@ $db = get_db();
 try {
 
   //select statements for the 3 products
-  foreach($db->query('SELECT productid from product where name=\'hoverboard\'') as $hoverboardid)
+  foreach($db->query('SELECT * from product') as $hoverboardid)
   {
-    print "1";
+    print product[0];
   }
   foreach($db->query($iphonexid = 'SELECT productid from product where name=\'iphonex\'') as $iphonexid)
   {

@@ -26,9 +26,9 @@ $db = get_db();
 try {
 
   //select statements for the 3 products
-  $db->query("SELECT productid from product where name='hoverboard'") as $hoverboardid;
-  $db->query($iphonexid = "SELECT productid from product where name='iphonex'") as $iphonexid;
-  $db->query($timemachineid = "SELECT productid from product where name='timemachine'") as $timemachineid;
+  $db->query("SELECT productid from product where name='hoverboard'") as $hoverboardid
+  $db->query($iphonexid = "SELECT productid from product where name='iphonex'") as $iphonexid
+  $db->query($timemachineid = "SELECT productid from product where name='timemachine'") as $timemachineid
   echo "hoverboardid: ".$hoverboardid."</br>";
   echo "iphonexid: ".$iphonexid."</br>";
   echo "timemachineid: ".$timemachineid."</br>";

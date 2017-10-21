@@ -12,9 +12,7 @@ echo $_SESSION["username"]."<br>";
 //for the purchaseLine table
 //$purchaseid
 
-$hoverboardid = "<script>getProductID($_SESSION['hoverboard'])</script>";
-//$iphonexid = getProductID($_SESSION["iphonex"]);
-//$timemachineid = getProductID($_SESSION["timemachine"]);
+
 
 echo $hoverboardid;
 //$quantity
@@ -25,6 +23,11 @@ $db = get_db();
 try {
 
   //I'll have to write a select statement to get this value
+  $hoverboardid = "SELECT productid from product where name='hoverboard'";
+  $iphonexid = "SELECT productid from product where name='iphonex'";
+  $timemachineid = "SELECT productid from product where name='timemachine'";
+
+  echo "hoverboardid: ".$hoverboardid."</br>";
 
   $query = 'INSERT INTO purchase(customerid, totalamount)
                   VALUES(:customerid, :total)';

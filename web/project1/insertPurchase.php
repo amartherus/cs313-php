@@ -20,8 +20,6 @@ $username = mysql_real_escape_string($username);
 require("dbconnect.php");
 $db = get_db();
 
-try {
-
   //select statements for the 3 products
   foreach($db->query('SELECT * from product') as $hoverboardid)
   {
@@ -52,13 +50,5 @@ try {
   $statement->bindValue(':customerid', $customerid);
   $statement->bindValue(':total', $total);
   */
-}
-catch (Exception $ex)
-{
-	// Please be aware that you don't want to output the Exception message in
-	// a production environment
-	echo "Error with DB. Details: $ex";
-	die();
-}
 
 ?>

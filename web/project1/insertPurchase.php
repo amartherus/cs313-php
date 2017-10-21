@@ -16,24 +16,21 @@ try {
   //select statements for the 3 products
   foreach($db->query('SELECT * from product where name=\'hoverboard\'') as $hoverboardid)
   {
-    echo "$hoverboardid[0]";
+    //echo "$hoverboardid[0]";
   }
   foreach($db->query($iphonexid = 'SELECT productid from product where name=\'iphonex\'') as $iphonexid)
   {
-    echo "$iphonexid[0]";
+    //echo "$iphonexid[0]";
   }
   foreach($db->query($timemachineid = 'SELECT productid from product where name=\'timemachine\'') as $timemachineid)
   {
-    echo "$timemachineid[0]";
+    //echo "$timemachineid[0]";
+  }
+  foreach($db->query("SELECT customerid from customer where name='$username'") as $customerid)
+  {
+    echo "$customerid[0]";
   }
 
-/*  print "hoverboardid: ".$hoverboardid."</br>";
-  print "iphonexid: ".$iphonexid."</br>";
-  print "timemachineid: ".$timemachineid."</br>";
-
-  //get the customerid
-  $db->query("SELECT customerid from customer where name='$username'") as $customerid;
-  echo "customerid: ".$customerid."</br>";
 
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';
@@ -42,7 +39,6 @@ try {
 
   $statement->bindValue(':customerid', $customerid);
   $statement->bindValue(':total', $total);
-  */
 }
 catch (Exception $ex)
 {

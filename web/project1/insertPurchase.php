@@ -34,7 +34,7 @@ try {
   {
     print "2";
   }
-  foreach($db->query($timemachineid = "\'SELECT productid from product where name=\'timemachine\'') as $timemachineid)
+  foreach($db->query($timemachineid = 'SELECT productid from product where name=\'timemachine\'') as $timemachineid)
   {
     print "3";
   }

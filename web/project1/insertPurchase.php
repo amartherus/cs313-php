@@ -26,12 +26,12 @@ try {
   {
     //echo "$timemachineid[0]";
   }
-  foreach($db->query("SELECT customerid from customer where name='$username'") as $customerid)
+  foreach($db->query('SELECT customerid from customer') as $customerid)
   {
     echo "$customerid[0]";
   }
 
-
+/*
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';
 
@@ -39,6 +39,7 @@ try {
 
   $statement->bindValue(':customerid', $customerid);
   $statement->bindValue(':total', $total);
+  */
 }
 catch (Exception $ex)
 {

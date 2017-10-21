@@ -9,8 +9,8 @@ $total = $_SESSION["hoverboard_price"]*$_SESSION["hoverboard_quantity"] +
 echo "total: ".$total."<br>";
 echo $_SESSION["username"]."<br>";
 
-$username = $_SESSION["username"];
-$username = mysql_real_escape_string($username);
+//$username = $_SESSION["username"];
+//$username = mysql_real_escape_string($username);
 
 //for the purchaseLine table
 //$purchaseid

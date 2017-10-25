@@ -15,9 +15,10 @@ if (isset($_POST['username']) && isset($_POST['password']))
   echo $_POST['username']."2</br>";
   $_SESSION["username"] = $_POST["username"];
   $_SESSION["password"] = $_POST["password"];
+  echo $_POST['username']."2</br>";
 
 	// Connect to the DB
-	require("dbConnect.php");
+	require("dbconnect.php");
 	$db = get_db();
 	$query = 'SELECT password FROM customer WHERE name=:username';
 	$statement = $db->prepare($query);

@@ -31,7 +31,7 @@ try {
   $statement = $db->prepare($username);
   $statement->bindValue(':username', $username);
 	$result = $statement->execute();
-  
+
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';
 
@@ -49,8 +49,8 @@ catch (Exception $ex)
 	die();
 }
 
-header("Location: confirmation.php");
+//header("Location: confirmation.php");
 
-die();
+//die();
 
 ?>

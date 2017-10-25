@@ -22,7 +22,7 @@ $query = 'INSERT INTO customer(name, password, email, address1, city, state, zip
 $statement = $db->prepare($query);
 
 $statement->bindValue(':username', $username);
-$statement->bindValue(':password', $password);
+$statement->bindValue(':password', $hashedPassword);
 $statement->bindValue(':email', $email);
 $statement->bindValue(':address', $address);
 $statement->bindValue(':city', $city);

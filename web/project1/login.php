@@ -28,19 +28,22 @@ if (isset($_POST['username']) && isset($_POST['password']))
 		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
-			header("Location: browseItems.php");
-			die(); // we always include a die after redirects.
+			//header("Location: browseItems.php");
+			//die(); // we always include a die after redirects.
+      echo "here1";
 		}
 		else
 		{
 			$badLogin = true;
       $_SESSION[badLogin] = $badLogin;
+      echo "here2";
 		}
 	}
 	else
 	{
 		$badLogin = true;
     $_SESSION[badLogin] = $badLogin;
+    echo "here3";
 	}
 }
 ?>

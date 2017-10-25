@@ -8,6 +8,7 @@ $total = $_SESSION["hoverboard_price"]*$_SESSION["hoverboard_quantity"] +
 
 echo "total: ".$total."<br>";
 echo $_SESSION["username"]."<br>";
+$username = $_SESSION["username"];
 
 require("dbconnect.php");
 $db = get_db();
@@ -27,8 +28,8 @@ try {
     //echo "$timemachineid[0]";
   }
   //select statement for username
-  $username = 'SELECT customerid from customer where name=\':username\'';
-  $statement = $db->prepare($username);
+  $query = 'SELECT customerid from customer where name=:username';
+  $statement = $db->prepare($query);
   $statement->bindValue(':username', $username);
 	$result = $statement->execute();
 

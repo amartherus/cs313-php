@@ -35,7 +35,7 @@ try {
 
   //this is now the customerid of a given username
   $customerid = $statement->fetch();
-  //$customerid = $customerid['name'];
+  $customerid = $customerid['customerid'];
   echo "customerid: ".$customerid."</br>";
 
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)

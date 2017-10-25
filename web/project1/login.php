@@ -23,6 +23,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
+  echo "result: ".$result;
 	if ($result)
 	{
     echo $_POST['username']."3</br>";

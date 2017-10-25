@@ -3,18 +3,18 @@ h1 {
 }
 
 .alert {
-  right:0px;
+  align-items: right;
   color: red;
 }
 
 .signup {
-  position: absolute;
+  align-items: right;
   top: 75px;
   right: 0px;
 }
 
 .login {
-  position: absolute;
+  align-items: right;
   top: 10px;
   right: 0px;
 }

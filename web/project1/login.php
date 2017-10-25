@@ -28,23 +28,26 @@ if (isset($_POST['username']) && isset($_POST['password']))
 		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
-			header("Location: browseItems.php");
-			die(); // we always include a die after redirects.
+      echo "here1";
+			//header("Location: browseItems.php");
+			//die(); // we always include a die after redirects.
 		}
 		else
 		{
 			$badLogin = true;
       $_SESSION[badLogin] = $badLogin;
-      header("Location: browseItems.php");
-      die(); // we always include a die after redirects.
+      echo "here2";
+      //header("Location: browseItems.php");
+      ///die(); // we always include a die after redirects.
 		}
 	}
 	else
 	{
 		$badLogin = true;
     $_SESSION[badLogin] = $badLogin;
-    header("Location: browseItems.php");
-    die(); // we always include a die after redirects.
+    echo "here3";
+    //header("Location: browseItems.php");
+    //die(); // we always include a die after redirects.
 	}
 }
 ?>

@@ -5,6 +5,7 @@
 
 // Start the session
 session_start();
+$_SESSION[badLogin] = false;
 
 if (isset($_POST['username']) && isset($_POST['password']))
 {

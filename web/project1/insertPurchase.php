@@ -34,8 +34,9 @@ try {
 	$result = $statement->execute();
 
   //this is now the customerid of a given username
-  $customerid = $result;
-  echo "result: ".$result."</br>";
+  $customerid = $statement->fetch();
+  $customerid = $customerid['name'];
+  echo "customerid: ".$customerid."</br>";
 
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';

@@ -27,18 +27,21 @@ try {
   {
     //echo "$timemachineid[0]";
   }
-  //select statement for username
+  //select statement for customerid
   $query = 'SELECT customerid from customer where name=:username';
   $statement = $db->prepare($query);
   $statement->bindValue(':username', $username);
 	$result = $statement->execute();
+
+  //this is now the customerid of a given username
+  $customerid = $result;
 
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';
 
   $statement = $db->prepare($insertPurchase);
 
-  $statement->bindValue(':customerid', $username);
+  $statement->bindValue(':customerid', $customerid);
   $statement->bindValue(':total', $total);
   $result = $statement->execute();
 

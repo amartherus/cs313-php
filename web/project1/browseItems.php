@@ -32,9 +32,9 @@ $_SESSION[badLogin] = false;
   <div>
     <?php
       if($_SESSION[badLogin]) {
-        <div class="alert alert-warning">
+        echo "<div class='alert alert-warning'>
           <strong>Incorrect password</strong>
-        </div>
+        </div>"
 
       }
     ?>

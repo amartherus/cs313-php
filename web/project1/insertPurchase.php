@@ -14,7 +14,7 @@ $db = get_db();
 try {
 
   //select statements for the 3 products
-  foreach($db->query('SELECT * from product where name=\'hoverboard\'') as $hoverboardid)
+  foreach($db->query('SELECT productid from product where name=\'hoverboard\'') as $hoverboardid)
   {
     //echo "$hoverboardid[0]";
   }
@@ -26,13 +26,12 @@ try {
   {
     //echo "$timemachineid[0]";
   }
-  $username = 'SELECT customerid from customer where name=\'$_SESSION[\'username\']\'';
-  foreach($db->query($username) as $customerid)
-  {
-    echo "$customerid[0]";
-  }
-
-/*
+  //select statement for username
+  $username = 'SELECT customerid from customer where name=:username';
+  $statement = $db->prepare($username);
+  $statement->bindValue(':username', $username);
+	$result = $statement->execute();
+  
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';
 
@@ -40,7 +39,7 @@ try {
 
   $statement->bindValue(':customerid', $customerid);
   $statement->bindValue(':total', $total);
-  */
+
 }
 catch (Exception $ex)
 {

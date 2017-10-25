@@ -37,7 +37,7 @@ try {
 
   $statement = $db->prepare($insertPurchase);
 
-  $statement->bindValue(':customerid', $customerid);
+  $statement->bindValue(':customerid', $username);
   $statement->bindValue(':total', $total);
   $result = $statement->execute();
 

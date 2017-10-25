@@ -39,6 +39,7 @@ try {
 
   $statement->bindValue(':customerid', $customerid);
   $statement->bindValue(':total', $total);
+  $result = $statement->execute();
 
   $i = 0;
   foreach($db->query('SELECT * from purchase') as $test)

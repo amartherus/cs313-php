@@ -32,5 +32,6 @@ session_start();
     $badLogin = $_SESSION["badLogin"];
      if($badLogin)
        echo "<div class='alert alert-danger'><strong>Danger!</strong></div>";
+    ?>
 
 </html>

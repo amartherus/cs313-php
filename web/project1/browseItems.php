@@ -33,7 +33,7 @@ $_SESSION[badLogin] = false;
     <?php
       if($_SESSION[badLogin]) {
         <div class="alert alert-warning">
-          <strong>Incorrect username or password!</strong>
+          <strong>Incorrect password</strong>
         </div>
 
       }

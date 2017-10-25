@@ -31,7 +31,7 @@ session_start();
    <?php
     $badLogin = $_SESSION["badLogin"];
      if($badLogin)
-       echo "<div class='alert alert-danger'><strong>Danger!</strong></div>";
+       echo "<div class='alert alert-danger'><strong>Incorrect Password!</strong></div>";
    ?>
 
   <!-- sign up button -->

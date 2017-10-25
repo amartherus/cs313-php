@@ -2,6 +2,11 @@ h1 {
   text-align: center;
 }
 
+.alert {
+  right:0px;
+  color: red;
+}
+
 .signup {
   position: absolute;
   top: 75px;

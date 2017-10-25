@@ -41,7 +41,7 @@ try {
   $statement->bindValue(':total', $total);
 
   $i = 0;
-  foreach($db->query('SELECT productid from purchase') as $test)
+  foreach($db->query('SELECT * from purchase') as $test)
   {
     echo "$test[$i]";
     $i = $i+1;

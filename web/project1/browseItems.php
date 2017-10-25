@@ -28,6 +28,17 @@ session_start();
   </div>
   </form>
 
+  <div>
+    <?php
+      if($_SESSION[badLogin]) {
+        <div class="alert alert-warning">
+          <strong>Incorrect username or password!</strong>
+        </div>
+
+      }
+    ?>
+  </div>
+
   <!-- sign up button -->
     <button class="signup" onclick="window.location.href='signup.php'">Sign up here</button>
 

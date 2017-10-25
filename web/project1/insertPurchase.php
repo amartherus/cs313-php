@@ -6,8 +6,6 @@ $total = $_SESSION["hoverboard_price"]*$_SESSION["hoverboard_quantity"] +
         $_SESSION["iphonex_price"]*$_SESSION["iphonex_quantity"] +
         $_SESSION["timemachine_price"]*$_SESSION["timemachine_quantity"];
 
-echo "total: ".$total."<br>";
-echo $_SESSION["username"]."<br>";
 $username = $_SESSION["username"];
 
 require("dbconnect.php");
@@ -36,7 +34,6 @@ try {
   //this is now the customerid of a given username
   $customerid = $statement->fetch();
   $customerid = $customerid['customerid'];
-  echo "customerid: ".$customerid."</br>";
 
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';
@@ -47,13 +44,6 @@ try {
   $statement->bindValue(':total', $total);
   $result = $statement->execute();
 
-  $i = 0;
-  foreach($db->query('SELECT * from purchase') as $test)
-  {
-    echo "$test[$i]";
-    $i = $i+1;
-  }
-
 }
 catch (Exception $ex)
 {
@@ -63,8 +53,8 @@ catch (Exception $ex)
 	die();
 }
 
-//header("Location: confirmation.php");
+header("Location: confirmation.php");
 
-//die();
+die();
 
 ?>

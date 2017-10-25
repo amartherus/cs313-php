@@ -35,6 +35,7 @@ try {
 
   //this is now the customerid of a given username
   $customerid = $result;
+  echo "result: ".$result."</br>";
 
   $insertPurchase = 'INSERT INTO purchase(customerid, totalamount)
                     VALUES(:customerid, :total)';

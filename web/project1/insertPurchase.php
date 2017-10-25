@@ -27,7 +27,7 @@ try {
     //echo "$timemachineid[0]";
   }
   //select statement for username
-  $username = 'SELECT customerid from customer where name=:username';
+  $username = 'SELECT customerid from customer where name=\':username\'';
   $statement = $db->prepare($username);
   $statement->bindValue(':username', $username);
 	$result = $statement->execute();

@@ -29,15 +29,6 @@ $_SESSION[badLogin] = false;
   </div>
   </form>
 
-  <!-- <div>
-    <?php
-      if($_SESSION[badLogin]) {
-        echo "<div class='alert alert-warning'><strong>Incorrect password</strong></div>"
-
-      }
-    ?>
-  </div>-->
-
   <!-- sign up button -->
     <button class="signup" onclick="window.location.href='signup.php'">Sign up here</button>
 

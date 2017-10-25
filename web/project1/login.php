@@ -10,6 +10,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 {
 	// they have submitted a username and password for us to check
   $username = $_POST["username"];
+  $password = $_POST["password"];
   $_SESSION["username"] = $_POST["username"];
   $_SESSION["password"] = $_POST["password"];
 

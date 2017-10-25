@@ -8,6 +8,10 @@ $city = $_POST["inputCity"];
 $state = $_POST["inputState"];
 $zip = $_POST["inputZip"];
 
+$username = htmlspecialchars($username);
+// Get the hashed password.
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
 require("dbconnect.php");
 $db = get_db();
 

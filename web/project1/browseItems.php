@@ -33,7 +33,7 @@ $_SESSION[badLogin] = false;
     $badLogin = $_SESSION["badLogin"];
     echo "stuff";
      if($badLogin)
-       echo "<div class='alert alert-warning'><strong>Incorrect password</strong></div>"
+       echo "Incorrect Password";
    ?>
 
   <!-- sign up button -->

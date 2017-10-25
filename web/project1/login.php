@@ -6,16 +6,11 @@
 // Start the session
 session_start();
 
-echo "started page";
-echo $_POST['username']."1</br>";
-
 if (isset($_POST['username']) && isset($_POST['password']))
 {
 	// they have submitted a username and password for us to check
-  echo $_POST['username']."2</br>";
   $_SESSION["username"] = $_POST["username"];
   $_SESSION["password"] = $_POST["password"];
-  echo $_POST['username']."2</br>";
 
 	// Connect to the DB
 	require("dbconnect.php");
@@ -24,10 +19,8 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
-  echo "result: ".$result;
 	if ($result)
 	{
-    echo $_POST['username']."3</br>";
 		$row = $statement->fetch();
 		$hashedPasswordFromDB = $row['password'];
 		// now check to see if the hashed password matches
@@ -35,22 +28,19 @@ if (isset($_POST['username']) && isset($_POST['password']))
 		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
-			//header("Location: browseItems.php");
-			//die(); // we always include a die after redirects.
-      echo "here1";
+			header("Location: browseItems.php");
+			die(); // we always include a die after redirects.
 		}
 		else
 		{
 			$badLogin = true;
       $_SESSION[badLogin] = $badLogin;
-      echo "here2";
 		}
 	}
 	else
 	{
 		$badLogin = true;
     $_SESSION[badLogin] = $badLogin;
-    echo "here3";
 	}
 }
 ?>

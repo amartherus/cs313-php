@@ -25,6 +25,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
 	$result = $statement->execute();
 	if ($result)
 	{
+    echo $_POST['username']."3</br>";
 		$row = $statement->fetch();
 		$hashedPasswordFromDB = $row['password'];
 		// now check to see if the hashed password matches

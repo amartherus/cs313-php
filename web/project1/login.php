@@ -35,12 +35,16 @@ if (isset($_POST['username']) && isset($_POST['password']))
 		{
 			$badLogin = true;
       $_SESSION[badLogin] = $badLogin;
+      header("Location: browseItems.php");
+      die(); // we always include a die after redirects.
 		}
 	}
 	else
 	{
 		$badLogin = true;
     $_SESSION[badLogin] = $badLogin;
+    header("Location: browseItems.php");
+    die(); // we always include a die after redirects.
 	}
 }
 ?>

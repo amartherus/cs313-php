@@ -9,6 +9,8 @@ session_start();
 if (isset($_POST['username']) && isset($_POST['password']))
 {
 	// they have submitted a username and password for us to check
+  echo $_SESSION["username"];
+  echo $_SESSION["password"];
   $_SESSION["username"] = $_POST["username"];
   $_SESSION["password"] = $_POST["password"];
 

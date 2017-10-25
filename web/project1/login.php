@@ -6,6 +6,8 @@
 // Start the session
 session_start();
 
+echo "started page";
+
 if (isset($_POST['username']) && isset($_POST['password']))
 {
 	// they have submitted a username and password for us to check

@@ -19,14 +19,15 @@ foreach ($db->query('SELECT product.name, purchaseline.quantity, purchase.totala
                       inner join purchaseLine on product.productID = purchaseLine.productID
                       inner join purchase on purchaseLine.purchaseID = purchase.purchaseID') as $purchase)
 {
-  print "$purchase[0] "."$purchase[1]</br>";
-  print "Order Total: "."$purchase[2]</br>";
+
 }
 
-foreach ($db->query('SELECT * from customer where name=\'$_SESSION[\'username\']\'') as $customer)
+foreach ($db->query('SELECT * FROM customer WHERE name=:username') as $customer)
 {
 }
 
+print "$purchase[0] "."$purchase[1]</br>";
+print "Order Total: "."$purchase[2]</br>";
 print "Thank you for your purchase "."$customer[0]!";
 
 ?>
